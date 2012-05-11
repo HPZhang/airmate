@@ -1,0 +1,14 @@
+[06-May-2012 19:52:14 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 134217729 bytes) in C:\webroot\airmate\protected\tests\unit\CustomerTest.php on line 34
+[06-May-2012 19:52:14 UTC] PHP Stack trace:
+[06-May-2012 19:52:14 UTC] PHP   1. {main}() C:\Documents and Settings\Administrator\Local Settings\Temp\phpunit_airmate_Administrator.php:0
+[06-May-2012 19:52:14 UTC] PHP   2. MyTestRunner::main() C:\Documents and Settings\Administrator\Local Settings\Temp\phpunit_airmate_Administrator.php:853
+[06-May-2012 19:52:14 UTC] PHP   3. MyTestRunner::runTest() C:\Documents and Settings\Administrator\Local Settings\Temp\phpunit_airmate_Administrator.php:722
+[06-May-2012 19:52:14 UTC] PHP   4. PHPUnit_TextUI_TestRunner->doRun() C:\Documents and Settings\Administrator\Local Settings\Temp\phpunit_airmate_Administrator.php:485
+[06-May-2012 19:52:14 UTC] PHP   5. PHPUnit_Framework_TestSuite->run() C:\php5.3.10\lib\PHPUnit\TextUI\TestRunner.php:305
+[06-May-2012 19:52:14 UTC] PHP   6. PHPUnit_Framework_TestSuite->runTest() C:\php5.3.10\lib\PHPUnit\Framework\TestSuite.php:733
+[06-May-2012 19:52:14 UTC] PHP   7. PHPUnit_Framework_TestCase->run() C:\php5.3.10\lib\PHPUnit\Framework\TestSuite.php:757
+[06-May-2012 19:52:14 UTC] PHP   8. PHPUnit_Framework_TestResult->run() C:\php5.3.10\lib\PHPUnit\Framework\TestCase.php:576
+[06-May-2012 19:52:14 UTC] PHP   9. PHPUnit_Framework_TestCase->runBare() C:\php5.3.10\lib\PHPUnit\Framework\TestResult.php:666
+[06-May-2012 19:52:14 UTC] PHP  10. PHPUnit_Framework_TestCase->runTest() C:\php5.3.10\lib\PHPUnit\Framework\TestCase.php:628
+[06-May-2012 19:52:14 UTC] PHP  11. ReflectionMethod->invokeArgs() C:\php5.3.10\lib\PHPUnit\Framework\TestCase.php:738
+[06-May-2012 19:52:14 UTC] PHP  12. CustomerTest->testRelativeQuery() C:\php5.3.10\lib\PHPUnit\Framework\TestCase.php:738

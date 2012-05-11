@@ -1,0 +1,268 @@
+/**
+ * Created with JetBrains WebStorm.
+ * UseTo: airmate activity
+ * Date: 12-5-9
+ * Time: 下午6:06
+ */
+
+/*---------------reset style--------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{
+    padding:0; margin:0;
+}
+a{
+    text-decoration: none;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font:14px/1.5em "微软雅黑","宋体";
+}
+img{
+    border: none;
+}
+table{
+    border-collapse: collapse;border-spacing: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.hide{
+    display: none;
+}
+/*global style*/
+
+.g-w{
+    width: 980px;margin: 0 auto;
+}
+.g-hd{
+    position: relative;
+    height: 60px;
+}
+.g-logo{
+    position: absolute;left: 45px;top:15px;
+}
+.g-logo h1{
+    width: 127px;height: 29px;overflow: hidden;
+    background: url(../images/logo.png);
+}
+
+.g-nav{
+    position: absolute;left: 315px;top: 25px;overflow: hidden;zoom:1;
+}
+.g-nav li{
+    float: left;display: inline;
+    background: url(../images/r.png) right center no-repeat;
+}
+.g-nav .noright{
+    background: none;
+}
+.g-nav a{
+    margin: 0 13px;
+    vertical-align: middle;
+    color: #2c97b7;
+    display: block;
+}
+.g-nav em{
+    display: inline-block;vertical-align: middle;
+    width: 1px;height:22px;
+    background: url(../images/common.png) -130px 0;
+}
+
+.g-nav a span{
+    color:#137439;
+    margin-right: 3px;
+}
+.g-nav .act{
+    color:#8dcb3d;
+}
+
+/*-----------------home.html-----------------------*/
+.g-x{
+    background: #a2d9f3  url(../images/x.png) repeat-x;
+}
+.g-c{
+    position: relative;
+    height: 666px;
+}
+
+
+/*---------------activity.html--------------------------*/
+
+.g-x2{
+    background: #a2d9f3  url(../images/x2.png) repeat-x;
+}
+
+.g-c2{
+    position: relative;
+    height: 665px;
+}
+
+/*form*/
+.input1{
+    width:225px;
+}
+.input2{
+    width: 75px;vertical-align: middle;
+}
+.input3{
+    width: 135px;
+}
+.g-c2 input{
+    border:none;outline: none;background: #edf6fa;
+    height: 19px;line-height: 19px;padding: 0 3px;margin: 0;
+}
+.g-c2 form{
+    position: absolute;left: 453px;top: 232px;
+}
+#name{
+    position: absolute;left: 0;top:0;
+}
+#phone{
+    position: absolute;left:0;top:24px;
+}
+
+.province,.city{
+    position: absolute;left: 0;top:48px;width: 90px;height: 19px;z-index: 5;
+}
+.city{
+   left: 100px;
+}
+
+#area{
+    position: absolute;left:0;top:72px;
+}
+#card{
+    position: absolute;left:0;top:95px;
+}
+#product{
+    position: absolute;left:0;top:119px;
+}
+#number{
+    position: absolute;left:0;top:143px;
+}
+#submit{
+    position: absolute;
+    left: 141px;
+    top:168px;
+    width: 90px;
+    height: 32px;
+    overflow: hidden;
+    background: none;
+    cursor: pointer;
+    text-indent: 99999px;
+}
+#example{
+    position: absolute;left:143px;top:144px;
+    width: 86px;height: 20px;font-size: 20px;line-height: 20px;z-index:100;
+}
+#example img{
+
+    position: absolute;
+    left: -60px;
+    bottom: 20px;
+    width: 208px;
+    height: 109px;
+    display: none;
+
+    /*position:absolute;left:-119px;bottom:20px;
+    width:323px;height:232px;
+    display:none;*/
+}
+/*simulate select*/
+.sim-selector{
+    padding-left:3px;height:19px;line-height: 19px;
+    background:#edf6fa url(../images/common.png) right -47px;cursor: pointer;
+}
+.sim-opt{
+    padding-left:3px;background: #edf6fa;overflow-y: scroll;
+}
+.sim-opt dd{
+    border-bottom: 1px solid #ddd;cursor: pointer;
+}
+
+.tips-wrap{
+    position:absolute;top:0;left:0;z-index: 200;
+    width: 100%;height: 100%;display: none;
+}
+.tips-wrap .bg{
+    position: absolute;top:0;left: 0;
+    width: 100%;height: 100%;
+    background: #000;opacity: 0.3;filter:alpha(opacity=30);
+}
+.tips-wrap .tips-content{
+    z-index: 10;position: absolute;
+}
+.tips-content .tl,.tips-content .tr,.tips-content .bl,.tips-content .br{
+    width: 12px;height: 12px;background: url(../images/pop.png);
+}
+.tips-content .tr{
+    background-position: -14px 0;
+}
+.tips-content .bl{
+    background-position: 0 -14px;
+}
+.tips-content .br{
+    background-position: -14px -14px;
+}
+.tips-content .bg2{
+    background: #e1eeff;
+}
+
+.clz{
+    position: absolute;right: 2px;top:5px;
+    background: url(../images/clz.png);
+    width: 34px;height: 35px;
+}
+
+.error-title{
+    margin:0 0 10px 50px;
+}
+.error-list{
+    margin-left: 50px;
+    list-style: none;
+    color: #eb0000;
+}
+/*.error-list li{
+    cursor: pointer;
+}*/
+
+.result-suc{
+    width: 584px;height: 363px;
+}
+.result-suc img{
+    display: block;
+    margin: 10px auto;
+}
+.result-suc div,.result-suc p{
+    width: 510px;margin: 0 auto;
+    font:14px/24px "微软雅黑","宋体";
+}
+.result-suc a{
+    color: #0066ff;
+}
+.result-fail{
+    width: 584px;
+    height: 300px;
+}
+.result-fail img{
+    display: block;
+    margin: 40px auto;
+}
+.result-fail p{
+    text-align: center;
+    font:34px/38px "微软雅黑","宋体";
+    color: #4e9c00;
+}
+.result-suc .award{
+    background: url(../images/award.png);
+    width: 536px;margin: 10px auto;
+    padding: 20px 0;
+    text-align: center;color: #cc0000;font:24px/30px "微软雅黑","宋体";
+}
+.result-suc .award i{
+    color: #663300;
+}
