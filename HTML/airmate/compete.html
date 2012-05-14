@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>骑车进藏</title>
+    <link rel="stylesheet" href="style/base.css">
+</head>
+<body class="g-x3">
+    <div class="g-w">
+        <div class="g-hd">
+            <a href="http://www.airmate-china.com" class="g-logo" target="_blank">
+                <h1></h1>
+            </a>
+            <ul class="g-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="detail.html"><span>低碳风‧行天下</span>抽奖活动</a></li>
+                <li><a href="compete.html" class="act">发电擂台赛</a></li>
+                <li><a href="product.html">直流风扇产品介绍</a></li>
+                <li class="noright"><a href="#">艾美特官网</a></li>
+            </ul>
+        </div>
+        <div class="g-c">
+            <img src="image/bg5.jpg" usemap="#bg">
+            <map name="bg" id="bg">
+                <area shape="rect" coords="813,627,840,652" href="#" data-key="sinablog" title="分享到新浪微博">
+                <area shape="rect" coords="844,627,870,652" href="#" data-key="qzone" title="分享到QQ空间">
+                <area shape="rect" coords="873,627,899,652" href="#" data-key="txblog" title="分享到腾讯微博">
+                <area shape="rect" coords="903,627,929,652" href="#" data-key="rr" title="分享到人人">
+                <area shape="rect" coords="933,627,957,652" href="#" data-key="wy" title="分享到网易微博">
+            </map>
+            <ul class="c-nav" id="compete-nav">
+                <li class="act"><a href="#">广州赛区></a></li>
+                <li><a href="#">上海赛区></a></li>
+                <li><a href="#">北京赛区></a></li>
+            </ul>
+            <iframe src="compete_component.html" frameborder="0" id="component" class="c-cpn"></iframe>
+        </div>
+    </div>
+   </div>
+    <script type="text/javascript" src="script/jq.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#compete-nav").delegate("a","click",function(e){
+                e.preventDefault();
+                $(this).parent().addClass("act").siblings().removeClass("act");
+
+            })
+        })
+    </script>
+</body>
+</html>

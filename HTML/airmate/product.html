@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style/base.css">
+</head>
+<body class="g-x3">
+	<div class="g-w">
+		<div class="g-hd">
+			<a href="http://www.airmate-china.com" class="g-logo">
+				<h1></h1>
+			</a>
+
+			<ul class="g-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="detail.html"><span>低碳风‧行天下</span>抽奖活动</a></li>
+				<li><a href="#">发电擂台赛</a></li>
+				<li><a href="product.html" class="act">直流风扇产品介绍</a></li>
+				<li class="noright"><a href="#">艾美特官网</a></li>
+			</ul>
+		</div>
+		<div class="g-c3">
+			<img src="image/bg4.jpg" usemap="#map">
+			<map name="map" id="map">
+				<area shape="rect" coords="816,627,840,652" href="#" data-key="sinablog" title="分享到新浪微博">
+				<area shape="rect" coords="844,627,868,652" href="#" data-key="qzone" title="分享到QQ空间">
+				<area shape="rect" coords="873,627,900,652" href="#" data-key="txblog" title="分享到腾讯微博">
+				<area shape="rect" coords="904,627,930,652" href="#" data-key="rr" title="分享到人人">
+				<area shape="rect" coords="934,627,958,652" href="#" data-key="wy" title="分享到网易微博">
+			</map>
+			<div class="p-slide">
+				<ul class="p-nav" id="p-nav">
+					<li class="act"><a class="p-nav-1" href="#"></a></li>
+					<li><a class="p-nav-2" href="#"></a></li>
+					<li><a class="p-nav-3" href="#"></a></li>
+					<li><a class="p-nav-4" href="#"></a></li>
+					<li><a class="p-nav-5" href="#"></a></li>
+					<li><a class="p-nav-6" href="#"></a></li>
+				</ul>
+                <div class="p-container" id="p-c">
+                    <img src="image/ie_p1.jpg" class="p-block p-block-1">
+                    <img src="image/ie_p2.jpg" class="p-block unvisiable">
+                    <img src="image/ie_p3.jpg" class="p-block unvisiable">
+                    <img src="image/ie_p4.jpg" class="p-block unvisiable">
+                    <img src="image/ie_p5.jpg" class="p-block unvisiable">
+                    <img src="image/ie_p6.jpg" class="p-block unvisiable">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="script/jq.js"></script>
+	<script type="text/javascript">
+
+		var Slide = (function(){
+//			var _isIe6 = /msie 6.0/i.test(navigator.userAgent);
+			var _nav = $("#p-nav");
+			var _container = $("#p-c>.p-block");
+			var _a = _nav.find("a");
+			var _act = _nav.find(".act");
+			var _cur = _act.index();
+			var _ieDelay = 500;
+			var _timer = null;
+			return {
+				init:function(){
+					this._events();
+					this._time();
+				},
+				_events:function(){
+					var _self = this;
+					_nav.bind("mouseenter",function(){
+						clearInterval(_timer);
+					}).bind("mouseleave",function(){
+						_self._time();
+					})
+					_nav.delegate("a","click",function(e,flag){
+						e.preventDefault();
+						var _parent = $(this).parent();
+						var _pre = _cur;
+						_cur = _parent.index();
+						_self._globalAnimate(_parent);
+//						!_isIe6? _self._ieAnimate(_pre, _cur):_self._animate(_pre, _cur);
+                        _self._ieAnimate(_pre, _cur);
+					});
+				},
+				_time:function(){
+					_timer = setInterval(function(){
+						_a.eq((_cur+1)%6).trigger("click",[true]);
+					},5000)
+				},
+				_globalAnimate:function($parent){
+					_act.removeClass("act")
+					_act = $parent.addClass("act");
+				},
+				_ieAnimate:function(pre,cur){
+					$(":animated").stop(true);
+					_container.eq(pre).animate({opacity:0,width:0},_ieDelay,function(){
+						_container.eq(cur).animate({opacity:1,width:631},_ieDelay);
+					})
+				}/*,
+				_animate:function(){
+
+				}*/
+			}
+		}());
+
+		Slide.init();
+	</script>
+</body>
+</html>
