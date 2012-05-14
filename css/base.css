@@ -146,12 +146,12 @@ ul{
     position: absolute;left:0;top:143px;
 }
 #submit{
-    position: absolute;left: 141px;top:168px;
-    width: 90px;height: 32px;
+    position: absolute;left: 136px;top:166px;
+    width: 94px;height: 36px;
     background: none;
 }
 #example{
-    position: absolute;left:143px;top:146px;
+    position: absolute;left:143px;top:143px;
     width: 86px;height: 13px;font-size: 13px;line-height: 13px;
 }
 /*simulate select*/
@@ -175,11 +175,11 @@ ul{
     width: 100%;height: 100%;
     background: #000;opacity: 0.3;filter:alpha(opacity=30);
 }
-.tips-content .tl,.tips-content .tr,.tips-content .bl,.tips-content .br{
-    width: 12px;height: 12px;background: url(../images/pop.png);
+.tips-wrap .tips-content{
+    z-index: 10;position: absolute;
 }
-.h12{
-    width: 12px;height: 12px;font-size:12px;line-height:12px;
+.tips-content .tl,.tips-content .tr,.tips-content .bl,.tips-content .br{
+    width: 12px;height:12px !important;height: 9px;background: url(../images/pop.png);
 }
 .tips-content .tr{
     background-position: -14px 0;
@@ -204,8 +204,8 @@ ul{
     margin:0 0 10px 30px;
 }
 .error-list{
-    margin-left: 50px;
-    list-style-position: inside;
+    margin-left: 30px;
+    list-style: none;
     color: #eb0000;
 }
 .error-list li{

@@ -3,14 +3,14 @@ $baseUrl = Yii::app()->getBaseUrl(true);
 $detail = $this->createUrl('detail');
 $lotteryDraw = $this->createUrl('lotteryDraw');
 ?>
-<body class="g-x2">
+<body class="g-x">
 <div class="tips-wrap" id="tips">
     <div class="bg"></div>
     <table class="tips-content">
         <tr>
-            <td class="tl" width="12"></td>
+            <td class="tl"></td>
             <td class="bg2"><a class="clz" id="clz" href="#"></a></td>
-            <td class="tr" width=12></td>
+            <td class="tr"></td>
         </tr>
         <tr>
             <td class="bg2"></td>
