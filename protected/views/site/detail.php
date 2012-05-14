@@ -20,13 +20,13 @@ $activity = $this->createUrl('activity');
     <div class="g-c">
         <img src="<?php echo "{$baseUrl}/images/bg3.jpg"; ?>" usemap="#bg3">
         <map name="bg3" id="bg3">
-            <area shape="poly" coords="456,80,703,63,696,125,454,147" href="<?php echo $activity; ?>">
-            <area shape="poly" coords="528,554,617,554,617,585,528,585" href="<?php echo $activity; ?>">
-            <area shape="rect" coords="813,627,840,652" href="#" data-key="sinablog" title="分享到新浪微博">
-            <area shape="rect" coords="844,627,870,652" href="#" data-key="qzone" title="分享到QQ空间">
-            <area shape="rect" coords="873,627,899,652" href="#" data-key="txblog" title="分享到腾讯微博">
-            <area shape="rect" coords="903,627,929,652" href="#" data-key="rr" title="分享到人人">
-            <area shape="rect" coords="933,627,957,652" href="#" data-key="wy" title="分享到网易微博">
+            <area shape="poly" coords="418,80,685,63,678,125,436,147" href="<?php echo $activity; ?>">
+            <area shape="poly" coords="513,555,603,555,603,587,513,587" href="<?php echo $activity; ?>">
+            <area shape="rect" coords="800,627,826,652" href="#" data-key="sinablog" title="分享到新浪微博">
+            <area shape="rect" coords="830,627,856,652" href="#" data-key="qzone" title="分享到QQ空间">
+            <area shape="rect" coords="860,627,886,652" href="#" data-key="txblog" title="分享到腾讯微博">
+            <area shape="rect" coords="890,627,916,652" href="#" data-key="rr" title="分享到人人">
+            <area shape="rect" coords="920,627,944,652" href="#" data-key="wy" title="分享到网易微博">
         </map>
     </div>
 </div>

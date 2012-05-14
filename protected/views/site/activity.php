@@ -8,13 +8,14 @@ $lotteryDraw = $this->createUrl('lotteryDraw');
     <div class="bg"></div>
     <table class="tips-content">
         <tr>
-            <td class="tl"></td>
+            <td class="tl" width="12"></td>
             <td class="bg2"><a class="clz" id="clz" href="#"></a></td>
-            <td class="tr"></td>
+            <td class="tr" width=12></td>
         </tr>
         <tr>
-            <td colspan="3" class="bg2 tips-box">
-            </td>
+            <td class="bg2"></td>
+            <td class="bg2 tips-box"></td>
+            <td class="bg2"></td>
         </tr>
         <tr>
             <td class="bl"></td>
@@ -62,10 +63,10 @@ $lotteryDraw = $this->createUrl('lotteryDraw');
             <input type="text" class="input1" id="card" name="Customer[num_card]">
             <input type="text" class="input1" id="product" name="Customer[num_product]">
             <input type="text" class="input3" id="number" name="Customer[num_flow]">
-            <a id="example" href="javascript:;">
-                <img src="images/example.png">
-            </a>
-            <input type="submit" value="lottery draw" id="submit" title="填完资料后,点击提交抽奖">
+            <a id="example" href="" style="display: block;background-color: #fff;"></a>
+            <img id="exampleImage" src="images/example.png" style="display: none;position: absolute;z-index: 1024;width: 208px;height: 109px;">
+            <input type="submit" id="submit" title="填完资料后,点击提交抽奖" style="display: block;background-color: #fff;cursor: pointer;">
+            <script type="text/javascript">$('#example').css('opacity', 0);$('#submit').css('opacity', 0);</script>
         </form>
     </div>
 </div>
@@ -166,9 +167,19 @@ $lotteryDraw = $this->createUrl('lotteryDraw');
                 Tips.show(2,Tips._serilaError(errorMap));
             }
         })
-        var _img = $("#example>img");
-        var _timer;
-        $("#example").bind("click",function(){
+        var example = $('#example');
+        var position = example.position();
+        var left = position.left;
+        var top = position.top;
+        var width = example.width();
+        var _img = example.next();
+        var imgWidth = _img.width();
+        var imgHeight = _img.height();
+        var imgLeft = left - (imgWidth - width) / 2;
+        var imgTop = top - imgHeight - 2;
+        _img.css({left: imgLeft, top: imgTop});
+        $("#example").bind("click",function(event){
+            event.preventDefault();
             _img.toggle();
         }).bind("mouseleave",function(){
              _img.hide();
